@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Eros Flame EDP — Noir Fragrances Pakistan</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#c9a84c;--gold-light:#e8c97a;--gold-dim:#7a6230;
+  --dark:#080608;--dark2:#100e12;--dark3:#181520;--dark4:#221e2a;
+  --cream:#f5f0e8;--muted:rgba(245,240,232,0.52);--border:rgba(201,168,76,0.18);
+  --green:#25D366;--radius:12px;--radius-lg:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--cream);font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;line-height:1.65;overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--dark2);}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:3px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(8,6,8,0.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;}
+.brand-name{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:0.06em;text-decoration:none;}
+.brand-name em{font-style:italic;color:var(--cream);}
+.nav-wa{display:flex;align-items:center;gap:7px;background:var(--green);color:#fff;padding:8px 18px;border-radius:8px;font-weight:700;font-size:.83rem;text-decoration:none;transition:all .2s;white-space:nowrap;}
+.nav-wa:hover{background:#1da851;transform:translateY(-1px);}
+.nav-back{color:var(--muted);text-decoration:none;font-size:.84rem;font-weight:500;padding:7px 12px;border-radius:7px;transition:all .2s;}
+.nav-back:hover{color:var(--gold);}
+
+.float-wa{position:fixed;bottom:24px;right:24px;z-index:997;width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.45);animation:pulse-wa 2.5s infinite;transition:transform .2s;}
+.float-wa:hover{transform:scale(1.12);}
+@keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.45)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.7)}}
+
+.hero-section{padding:100px 5% 0;background:var(--dark);}
+.breadcrumb{font-size:.75rem;color:var(--muted);margin-bottom:24px;display:flex;align-items:center;gap:6px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb span{color:var(--gold-dim);}
+
+.product-layout{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;max-width:1200px;margin:0 auto;padding:32px 0 80px;}
+
+/* IMAGE GALLERY */
+.gallery{position:sticky;top:90px;}
+.main-img{width:100%;aspect-ratio:1;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(135deg,#1a1500,#2e2400);display:flex;align-items:center;justify-content:center;position:relative;border:1px solid var(--border);margin-bottom:12px;}
+.main-emoji{font-size:8rem;filter:drop-shadow(0 12px 40px rgba(0,0,0,0.7));}
+.main-img::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 70%,rgba(201,168,76,0.08),transparent 70%);pointer-events:none;}
+.thumbnails{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.thumb{aspect-ratio:1;border-radius:10px;border:1.5px solid var(--border);background:linear-gradient(135deg,#1a1500,#2e2400);display:flex;align-items:center;justify-content:center;font-size:2.2rem;cursor:pointer;transition:all .2s;overflow:hidden;}
+.thumb:hover,.thumb.active{border-color:var(--gold);box-shadow:0 0 0 2px rgba(201,168,76,0.3);}
+.thumb-label{font-size:.55rem;font-weight:700;color:var(--muted);text-align:center;margin-top:4px;letter-spacing:.5px;text-transform:uppercase;}
+
+/* PRODUCT INFO */
+.product-info{}
+.pi-brand{font-size:.7rem;font-weight:700;color:var(--gold-dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.pi-name{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;color:var(--cream);line-height:1.15;margin-bottom:10px;}
+.pi-tagline{font-size:.95rem;color:var(--muted);font-style:italic;margin-bottom:20px;line-height:1.65;}
+.pi-price{font-size:2rem;font-weight:800;color:var(--gold);margin-bottom:4px;}
+.pi-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+.meta-chip{background:var(--dark3);border:1px solid var(--border);border-radius:6px;padding:4px 12px;font-size:.72rem;font-weight:600;color:var(--muted);}
+
+.pi-desc{font-size:.9rem;color:var(--muted);line-height:1.85;margin-bottom:28px;border-left:2px solid var(--border);padding-left:16px;}
+
+/* ORDER BUTTONS */
+.order-btns{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap;}
+.btn-gold{background:var(--gold);color:var(--dark);padding:13px 28px;border-radius:8px;font-weight:700;font-size:.92rem;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.28);}
+.btn-outline{background:transparent;color:var(--cream);border:1.5px solid var(--border);padding:13px 28px;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* NOTES */
+.notes-section{background:var(--dark3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:24px;}
+.ns-title{font-size:.68rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.note-row{margin-bottom:14px;}
+.note-row:last-child{margin-bottom:0;}
+.note-label{font-size:.7rem;font-weight:700;color:var(--gold-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
+.note-pills{display:flex;gap:6px;flex-wrap:wrap;}
+.note-pill{background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:100px;padding:3px 11px;font-size:.73rem;color:var(--cream);}
+
+/* RATINGS */
+.ratings-section{background:var(--dark3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:24px;}
+.rs-title{font-size:.68rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.rating-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.rating-row:last-child{margin-bottom:0;}
+.rr-label{font-size:.78rem;font-weight:600;color:var(--muted);width:90px;flex-shrink:0;}
+.rb{display:flex;gap:4px;}
+.rb-dot{width:16px;height:8px;border-radius:3px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.2);transition:background .2s;}
+.rb-dot.filled{background:var(--gold);border-color:var(--gold);}
+.rr-val{font-size:.78rem;font-weight:700;color:var(--gold);margin-left:4px;}
+
+/* SEASON / OCCASION */
+.tags-section{background:var(--dark3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;}
+.ts-title{font-size:.68rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.tag-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.tag-pill{background:rgba(201,168,76,0.07);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:.78rem;font-weight:600;color:var(--cream);}
+
+/* SIMILAR */
+.similar-section{padding:60px 5%;background:var(--dark2);border-top:1px solid var(--border);}
+.sim-container{max-width:1200px;margin:0 auto;}
+.gold-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 12px;}
+.sec-label{font-size:.68rem;font-weight:700;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--cream);margin-bottom:28px;line-height:1.2;}
+.sim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.sim-card{background:var(--dark3);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;text-align:center;text-decoration:none;transition:all .25s;display:block;}
+.sim-card:hover{border-color:rgba(201,168,76,0.5);transform:translateY(-4px);box-shadow:0 10px 32px rgba(201,168,76,0.1);}
+.sim-emoji{font-size:2.4rem;margin-bottom:10px;}
+.sim-name{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:600;color:var(--cream);margin-bottom:6px;line-height:1.3;}
+.sim-price{font-size:.82rem;font-weight:700;color:var(--gold);}
+
+/* FOOTER */
+footer{background:#050305;border-top:1px solid var(--border);padding:28px 5%;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;flex-wrap:wrap;gap:8px;}
+.footer-bottom p{font-size:.74rem;color:rgba(245,240,232,0.2);}
+.footer-bottom a{color:var(--gold-dim);text-decoration:none;font-size:.74rem;}
+.footer-bottom a:hover{color:var(--gold);}
+
+@media(max-width:860px){
+  .product-layout{grid-template-columns:1fr;gap:32px;}
+  .gallery{position:static;}
+  .sim-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-section{padding:90px 4% 0;}
+}
+@media(max-width:560px){
+  .thumbnails{grid-template-columns:repeat(4,1fr);}
+  .sim-grid{grid-template-columns:repeat(2,1fr);}
+  .order-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/923343652448?text=Hi!%20I%20want%20to%20order%20Versace%20Eros%20Flame%20EDP%20100ml" class="float-wa" target="_blank">💬</a>
+
+<nav>
+  <a href="index.html" class="brand-name">Noir <em>Fragrances</em></a>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="index.html" class="nav-back">← Back to Shop</a>
+    <a href="https://wa.me/923343652448?text=Hi!%20I%20want%20to%20order%20Versace%20Eros%20Flame%20EDP%20100ml" class="nav-wa" target="_blank">💬 Order Now</a>
+  </div>
+</nav>
+
+<div class="hero-section">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="index.html#perfumes">Shop</a>
+      <span>›</span>
+      <span style="color:var(--cream);">Eros Flame EDP</span>
+    </div>
+  </div>
+
+  <div class="product-layout">
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="main-img" id="mainImg">
+        <span class="pbadge badge-new">New</span>
+        <span class="main-emoji" id="mainEmoji">⚡</span>
+      </div>
+      <div class="thumbnails">
+        <div>
+          <div class="thumb active" onclick="setView(this,'bottle','⚡','Front View')">
+            <span style="font-size:2.2rem">⚡</span>
+          </div>
+          <div class="thumb-label">Front</div>
+        </div>
+        <div>
+          <div class="thumb" onclick="setView(this,'side','↔️','Side View')">
+            <span style="font-size:2.2rem">↔️</span>
+          </div>
+          <div class="thumb-label">Side</div>
+        </div>
+        <div>
+          <div class="thumb" onclick="setView(this,'cap','🎁','With Cap')">
+            <span style="font-size:2.2rem">🎁</span>
+          </div>
+          <div class="thumb-label">Box</div>
+        </div>
+        <div>
+          <div class="thumb" onclick="setView(this,'lifestyle','✨','Lifestyle')">
+            <span style="font-size:2.2rem">✨</span>
+          </div>
+          <div class="thumb-label">Style</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="product-info">
+      <div class="pi-brand">Versace</div>
+      <h1 class="pi-name">Eros Flame EDP</h1>
+      <p class="pi-tagline">"Passion ignited. A fiery, spicy twist on the Eros legend."</p>
+      <div class="pi-price">PKR 13,500</div>
+      <div class="pi-meta">
+        <div class="meta-chip">📦 100ml</div>
+        <div class="meta-chip">💧 Eau de Parfum</div>
+        <div class="meta-chip">👤 Men</div>
+        <div class="meta-chip">✅ 100% Authentic</div>
+      </div>
+
+      <p class="pi-desc">Eros Flame is a fiery, passionate reimagining of the Eros story. Lemon, pepper, and grapefruit ignite the opening with sparkling intensity. At the heart, geranium and tonka bean add a warm, spicy richness. Sandalwood and vetiver close the composition with a smooth, woody warmth that burns long and bright — just like its name suggests.</p>
+
+      <div class="order-btns">
+        <a href="https://wa.me/923343652448?text=Hi!%20I%20want%20to%20order%20Versace%20Eros%20Flame%20EDP%20100ml" class="btn-gold" target="_blank">
+          💬 Order on WhatsApp
+        </a>
+        <a href="index.html#perfumes" class="btn-outline">
+          ← Back to Collection
+        </a>
+      </div>
+
+      <!-- FRAGRANCE NOTES -->
+      <div class="notes-section">
+        <div class="ns-title">🌿 Fragrance Notes</div>
+        <div class="note-row">
+          <div class="note-label">Top Notes</div>
+          <div class="note-pills"><span class="note-pill">Lemon</span><span class="note-pill">Pepper</span><span class="note-pill">Grapefruit</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-label">Heart Notes</div>
+          <div class="note-pills"><span class="note-pill">Geranium</span><span class="note-pill">Tonka Bean</span><span class="note-pill">Rosemary</span></div>
+        </div>
+        <div class="note-row">
+          <div class="note-label">Base Notes</div>
+          <div class="note-pills"><span class="note-pill">Sandalwood</span><span class="note-pill">Vetiver</span><span class="note-pill">Musk</span></div>
+        </div>
+      </div>
+
+      <!-- RATINGS -->
+      <div class="ratings-section">
+        <div class="rs-title">⭐ Performance Ratings</div>
+        <div class="rating-row">
+          <div class="rr-label">Longevity</div>
+          <div class="rb"><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot"></div><div class="rb-dot"></div></div>
+          <div class="rr-val">8/10</div>
+        </div>
+        <div class="rating-row">
+          <div class="rr-label">Projection</div>
+          <div class="rb"><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot"></div><div class="rb-dot"></div></div>
+          <div class="rr-val">8/10</div>
+        </div>
+        <div class="rating-row">
+          <div class="rr-label">Sillage</div>
+          <div class="rb"><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot filled"></div><div class="rb-dot"></div><div class="rb-dot"></div><div class="rb-dot"></div></div>
+          <div class="rr-val">7/10</div>
+        </div>
+      </div>
+
+      <!-- SEASONS & OCCASIONS -->
+      <div class="tags-section">
+        <div class="ts-title">🗓️ Best Seasons</div>
+        <div class="tag-pills"><div class="tag-pill">🍂 Autumn</div><div class="tag-pill">❄️ Winter</div></div>
+        <div class="ts-title" style="margin-top:4px;">👔 Best Occasions</div>
+        <div class="tag-pills"><div class="tag-pill">🌙 Evening</div><div class="tag-pill">❤️ Date Night</div><div class="tag-pill">😎 Casual</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIMILAR PERFUMES -->
+<div class="similar-section">
+  <div class="sim-container">
+    <div style="text-align:center;margin-bottom:28px;">
+      <div class="gold-divider"></div>
+      <p class="sec-label">You May Also Like</p>
+      <h2 class="sec-title">Similar Fragrances</h2>
+    </div>
+    <div class="sim-grid">
+      <a href="versace-eros-edt.html" class="sim-card">
+        <div class="sim-emoji">⚡</div>
+        <div class="sim-name">Versace Eros EDT</div>
+        <div class="sim-price">PKR 12,500</div>
+      </a>
+      <a href="versace-eros-edp.html" class="sim-card">
+        <div class="sim-emoji">⚡</div>
+        <div class="sim-name">Versace Eros EDP</div>
+        <div class="sim-price">PKR 14,000</div>
+      </a>
+      <a href="spicebomb-edt.html" class="sim-card">
+        <div class="sim-emoji">💣</div>
+        <div class="sim-name">Spicebomb EDT</div>
+        <div class="sim-price">PKR 14,500</div>
+      </a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p>© 2025 Noir Fragrances · Karachi, Pakistan 🇵🇰</p>
+    <a href="index.html">← Back to Shop</a>
+    <p>100% Authentic · Nationwide Delivery</p>
+  </div>
+</footer>
+
+<script>
+function setView(el, view, emoji, label) {
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('mainEmoji').textContent = emoji;
+}
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.borderBottomColor =
+    window.scrollY > 50 ? 'rgba(201,168,76,0.35)' : 'rgba(201,168,76,0.18)';
+});
+</script>
+</body>
+</html>
